@@ -1,0 +1,226 @@
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	font: 14pt sans-serif;
+}
+
+body{
+	height: 1123px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+span{
+	margin-left: 30px !important;
+}
+
+.linhaUm, .linhaDois, .linhaTres{
+	text-transform: uppercase;
+}
+
+.main {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+#clone{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+ .linhaUm{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 40px;
+	border: 1px solid #333;
+	text-align: center;
+}
+ .linhaUm p:first-child{
+	border-right: 1px solid #333;
+}
+ .linhaDois{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 40px;
+	border: 1px solid #333;
+}
+ .linhaDois p{
+	margin-left: 4px;
+}
+ .linhaDois p:nth-child(-n+3){
+	border-right: 1px solid #333;
+}
+ .linhaTres{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 4px;
+	border: 1px solid #333;
+}
+ .linhaTres p{
+	text-align: center;
+	font-size: 16pt;
+	font-weight: bold;
+}
+ .linhaTres p:nth-child(-n+3){
+	border-right: 1px solid #333;
+}
+ .areaNotas{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+	min-height: 200px;
+	border: 1px solid #333;
+	display: flex;
+	flex-direction: column;
+}
+
+.input{
+	display: flex;
+	align-items: center;
+}
+
+.areaNotas i {
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	font-size: 15pt;
+	align-items: center;
+	color: green;
+}
+
+ .areaNotas h3{
+	font-weight: bold;
+	margin: 10px 10px 10px 25px;
+	text-transform: uppercase;
+}
+.areaNotas span:first-child{
+	margin-top: -10px;
+}
+
+.areaNotas span{
+	display: flex;
+	justify-content: space-between;
+	width: 810px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+
+.areaNotas span i{
+	color: red;
+}
+
+.areaNotas p{
+	margin: 10px 10px 10px 25px;
+
+} input{
+	margin: 10px 10px 10px 25px;
+}
+
+ .rodape{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 1fr 1fr;
+	justify-content: space-between;
+	margin-top: 4px;
+	margin-bottom: 10px;
+	border: 1px solid #333;
+	font-size: 14pt;
+	padding: 2px;
+}
+ .rodape p{
+	margin-left: 4px;
+}
+ .rodape p:first-child{
+	border-right: 1px solid #333;
+}
+
+/* TIRAR ALGUNS ELEMENTOS NA HORA DE IMPRIMIR */
+@media print {
+  input, button, i{
+    display: none !important;
+  }
+  select{
+  	-webkit-appearance: none;
+  }
+}
+
+@media save {
+  input, button, i{
+    display: none !important;
+  }
+  select{
+  	-webkit-appearance: none;
+  }
+}
+
+/* DESATIVAR DECORAÇÃO DO TYPE NUMBER: AS DUAS SETINHAS */
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+
+input[type=number] { 
+   -moz-appearance: textfield;
+   appearance: textfield;
+}
+
+.depart{
+	text-align-last: center;
+	font-weight: bold;
+}
+
+select:required:invalid {
+  color: gray;
+  font-weight: 400;
+}
+option[value=""][disabled] {
+  display: none;
+}
+option {
+  color: black;
+}
+
+#numeroNota{
+	width: 150px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-transform: uppercase;
+}
+
+#text{
+	width: 600px;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-transform: uppercase;
+}
+
+#textoNotas{
+	display: flex;
+	align-items: center;
+} 	
+
+#textoNotas #nota{
+	width: 150px;
+	margin-left: 25px;
+	font-weight: bold;
+}
+
+#textoNotas #emitente{
+	width: 600px;
+	margin-left: 25px;
+
+}
+
+#textoNotas i{
+	color: red;
+}

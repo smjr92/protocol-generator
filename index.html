@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Protocolos</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.4/jszip.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+</head>
+<body onload="data(),nome()">
+	<div class="main" id="main">
+		<div class="linhaUm">
+			<p>ESTORIL DISTR. VEÍCULOS</p>
+			<p>PROTOCOLO DE DOCUMENTOS</p>
+		</div>
+		<div class="container" id="container">
+			<div class="linhaDois">
+				<p>DE</p>
+				<p>DEPARTAMENTO</p>
+				<p>PARA</p>
+				<p>DEPARTAMENTO</p>
+			</div>
+			<div class="linhaTres">
+				<p id="nome"></p>
+				<p id="depart"></p>
+				<p>JESSYCA</p>
+				<p>Fiscal</p>
+			</div>
+			<div class="areaNotas" id="areaNotas">
+				<h3>Segue anexo as seguintes notas fiscais:</h3>
+				<div class="input">	
+					<input id="numeroNota" type="number" placeholder="Nº da Nota" autofocus>
+					<!-- <input id="text" type="text" placeholder="Emitente"> -->
+					<!--<button onclick="add()">+</button>-->
+					<input id="text" type="text" list="datalist" placeholder="Emitente" onkeyup="ac(this.value)">
+					<datalist id="datalist"></datalist>
+
+
+					<i class="fas fa-plus-circle" onclick="add()"></i>
+				</div>
+				<br>
+			</div>
+			<div class="rodape">
+				<p id="data"></p>
+				<p>Assinatura:</p>
+			</div>
+		</div>
+		<div class="clone" id="clone">
+			<button onclick="clone()">Imprimir</button>
+			<button onclick="salvar()">Salvar</button>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="autocomplete.js"></script>
+</body>
+</html>
